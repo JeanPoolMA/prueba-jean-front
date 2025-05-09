@@ -15,6 +15,7 @@ export function useCreateProductStock() {
       });
       queryClient.invalidateQueries({
         queryKey: ["products"],
+        refetchType: "all",
       });
       queryClient.invalidateQueries({
         queryKey: ["categories"],
@@ -34,9 +35,11 @@ export function useUpdateProductStock() {
       queryClient.invalidateQueries({ queryKey: ["productStock", data.id] });
       queryClient.invalidateQueries({
         queryKey: ["products"],
+        refetchType: "all",
       });
       queryClient.invalidateQueries({
         queryKey: ["categories"],
+        refetchType: "all",
       });
     },
   });

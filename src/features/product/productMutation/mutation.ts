@@ -8,6 +8,7 @@ export function useCreateProduct() {
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["products"],
+        refetchType: "all",
       });
       queryClient.invalidateQueries({
         queryKey: ["categories"],

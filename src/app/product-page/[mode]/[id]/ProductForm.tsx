@@ -3,7 +3,7 @@
 import {
   useCreateProduct,
   useUpdateProduct,
-} from "@/features/product/productStockMutation/mutation";
+} from "@/features/product/productMutation/mutation";
 import { Product } from "@/models/ProductStock";
 import { Button, Flex, Form, Input, InputNumber, Spin, Switch } from "antd";
 import { useForm } from "antd/es/form/Form";
